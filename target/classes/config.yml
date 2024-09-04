@@ -1,0 +1,133 @@
+# --------------------------------------
+# Database Configuration
+# --------------------------------------
+# Changes to this section require a full server restart.
+# Supported database types: 0 (MySQL), 1 (SQLite), 2 (MongoDB), 3 (MariaDB).
+db:
+  type: 1
+  database: "collectorStorage"
+  url: ""
+  port: ""
+  username: ""
+  password: ""
+
+
+
+# --------------------------------------
+# Task Configuration
+# --------------------------------------
+# Delay for the auto-sell task, specified in seconds.
+autoSellTaskDelay: 3600
+
+
+
+# --------------------------------------
+# Messages Configuration
+# --------------------------------------
+# Customizable in-game messages with color codes.
+reloadConfig: '&bConfiguration reloaded successfully!'
+noPermission: '&cPermission denied. You cannot execute this command.'
+giveItemSelf: '&eItem granted to yourself.'
+giveItem: '&eCollector sent to {player}.'
+giveItemAll: '&eCollectors granted to all players.'
+receiveItem: '&eReceived a collector from {player}.'
+playerOffline: '&cError: {player} is not online.'
+tooPoor: '&cInsufficient funds to purchase this upgrade. Needed: {cost}, Available: {balance}.'
+upgradePurchased: '&bCollector upgraded for {cost}$! New balance: {balance}.'
+cannotUpgradeRadius: '&cRadius upgrade failed: Conflict with another collector. Please relocate.'
+cannotPlaceCollector: '&cError: Collector within another’s range.'
+playerLimitReached: '&cCollector limit of {playerLimit} reached.'
+islandLimitReached: '&cIsland collector limit of {islandLimit} reached.'
+bothLimitReached: '&cCollector limits reached for both player ({playerLimit}) and island ({islandLimit}).'
+
+
+
+# --------------------------------------
+# Collector Configuration
+# --------------------------------------
+# Settings for the collector items in the game.
+#Usable placeholders: "{player}", "{money}", "{items}", "{total_money_sold}", "{total_items_sold}", "{currentRadius}", "{maxRadius}", "{sellMultiplier}", "{maxSellMultiplier}", "{canLoadChunks}", "{radiusNextUpgradeCost}", "{sellMultiplierNextUpgradeCost}", "{currentSellMultiplierLevel}", "{maxSellMultiplierLevel}", "{chunkLoaderPrice}"
+collectorMaterial: BEACON
+collectorMaterialData: 0
+collectorItemName: '&aChunk Collector'
+collectorItemLore:
+#- '&bHarness the power of your chunks efficiently!'
+
+
+
+# --------------------------------------
+# Hologram Settings
+# --------------------------------------
+# Configuration for holograms associated with collectors.
+hologramLines:
+# - 'Player: {player}'
+# - 'Items: {items}'
+# - 'Idk add more'
+
+# Offset adjusts the hologram's height above the collector.
+hologramYOffSet: 4
+
+
+
+# --------------------------------------
+# Upgrade Settings
+# --------------------------------------
+# Configure the cost and limits for upgrades.
+maxText: '&cMAX LEVEL'
+radiusInitialCost: 1000
+radiusCostGrowth: 2.5
+maxRadius: 4
+sellMultiplierAdd: 0.2
+sellMultiplierInitialCost: 1000
+sellMultiplierCostGrowth: 1.2
+maxSellMultiplier: 5.2
+chunkLoaderPrice: 100000
+
+
+
+# --------------------------------------
+# Limit Configuration
+# --------------------------------------
+# Limits on the number of collectors a player or island can place.
+playerLimit: 5
+islandLimit: 5
+# Modes: 1 (Player Limit), 2 (Island Limit), 3 (Both), 4, or any other value (No Limit).
+limitMode: 1
+
+
+
+# --------------------------------------
+# GUI Configuration
+# --------------------------------------
+# Custom GUI for managing collectors.
+GUIName: '&cCollector Dashboard'
+GUISize: 27
+items:
+# Example configurations for GUI items:
+# item1:
+#   name: '&7Empty Slot'
+#   material: STAINED_GLASS_PANE
+#   materialData: 2
+#   slot: '0-10, 12, 14, 16-26'
+# item2:
+#   name: '&bUpgrade Radius'
+#   material: HOPPER
+#   lore:
+#     - 'Current/Max Radius: {currentRadius}/{maxRadius}'
+#     - 'Upgrade Cost: {radiusNextUpgradeCost}'
+#   upgrade: RADIUS
+#   slot: 11
+# item3:
+#   name: '&bUpgrade Sell Multiplier'
+#   lore:
+#     - 'Current Multiplier: {sellMultiplier}'
+#     - 'Max Level: {maxSellMultiplierLevel} - Upgrade Cost: {sellMultiplierNextUpgradeCost}'
+#   upgrade: SELL_MULTIPLIER
+#   slot: 13
+# item4:
+#   name: '&bActivate Chunk Loader'
+#   lore:
+#     - 'Status: {canLoadChunks}'
+#     - 'Activation Price: {chunkLoaderPrice}'
+#   upgrade: CHUNK_LOADER
+#   slot: 15

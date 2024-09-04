@@ -1,0 +1,15 @@
+name: SkyblockCollector
+version: '${project.version}'
+main: com.deadshotmdf.SkyblockCollector.SC
+author: DeadshotMDF
+depend: [Vault, HolographicDisplays, ShopGUIPlus]
+softdepend: [SuperiorSkyblock2, AdvancedSpawners]
+commands:
+  collectorgive:
+    description: "Gives a collector to a player."
+    usage: "/collectorgive [player/@a] [max]"  # [] - optional
+    aliases: [collectorg, cgive, givecollector]
+  collectorreload:
+    description: "Reloads the configuration."
+    usage: "/collectorreload"
+    aliases: [reloadcollector, collectorr, creload]
